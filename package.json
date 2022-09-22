@@ -1,0 +1,40 @@
+{
+	"description": "Go/split/create/peek/run to test/source",
+	"displayName": "Testing Nirvana",
+	"name": "vscode-testing-nirvana",
+	"version": "0.8.0",
+	"repository": "icetbr/vscode-testing-nirvana",
+	"publisher": "icetbr",
+	"license": "MIT",
+	"-------------------------------------": "",
+	"icon": "media/icons/128.png",
+	"categories": [
+		"Testing"
+	],
+	"keywords": [
+		"testing"
+	],
+	"activationEvents": [
+		"onLanguage:javascript",
+        "onLanguage:typescript"
+	],
+	"contributes": {
+		"commands": [
+			{ "command": "testingNirvana.splitTo", "title": "Testing Nirvana: Split to file" },
+			{ "command": "testingNirvana.goTo", "title": "Testing Nirvana: Go to file" }
+		],
+		"configuration": {
+            "type": "object",
+            "title": "Testing Nirvana",
+            "properties": {
+                "testingNirvana.srcFolder": { "type": "string", "default": "src" },
+                "testingNirvana.testFolder": { "type": "string", "default": "test" },
+                "testingNirvana.testSuffix": { "type": "string", "default": "Test" }
+            }
+        }
+	},
+	"main": "src/extension.js",
+	"engines": {
+		"vscode": "^1.67.0"
+	}
+}
